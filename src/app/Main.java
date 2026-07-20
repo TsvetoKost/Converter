@@ -1,14 +1,19 @@
 package app;
 
-public class Main
-{
+public class Main {
 
-    public static void main(String[] args)
-    {
-        double kg = 10;
-        double pounds = kg * 2.20462;
+    private static final double CONV_K = 2.20462;
 
-        System.out.println("Kilograms: " + kg);
-        System.out.println("Pounds: " + pounds);
+    public static void main(String[] args) {
+
+        System.out.println("App for measures converting.");
+
+        double kgs = 5;
+        double pounds = convKgsToPounds(kgs);
+        System.out.println("Result is " + pounds + " pounds.");
+    }
+
+    private static double convKgsToPounds(double kgs) {
+        return kgs * CONV_K;
     }
 }
